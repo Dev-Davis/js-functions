@@ -50,6 +50,19 @@ const printToDom = (divId, textToPrint) => {
     selectedDiv.innerHTML += textToPrint;
 };
 
-printToDom('dog-breeds', dogBreed('Chow'));
-printToDom('nuggetizer', nuggetizer('bear'));
-printToDom('nuggetizer', nuggetizer('kitten'));
+// printToDom('dog-breeds', dogBreed('Chow'));
+// printToDom('nuggetizer', nuggetizer('bear'));
+// printToDom('nuggetizer', nuggetizer('kitten'));
+
+let bandNumber = 1;
+
+const addBand = (bandName) => {
+    //get band
+    //test to send
+    const bandText = `<h5>${bandNumber}. ${bandName}</h5>`
+    //modify band number
+    bandNumber ++;
+    printToDom('band-list', bandText);
+};
+addBand('Metallica') // 1.Metallica
+addBand('Slayer') 
