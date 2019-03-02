@@ -37,3 +37,19 @@ const dogBreed = (breed) => {
 };
 
 console.log(dogBreed('Labrador Retriever'));
+
+// const dogBreedDiv = document.getElementById('dog-breeds');
+// dogBreedDiv.innerHTML = dogBreed('Chow');
+
+// const nuggetizerDiv = document.getElementById('nuggetizer');
+// nuggetizerDiv.innerHTML = nuggetizer('lamb');
+// nuggetizerDiv.innerHTML += nuggetizer('kitten');
+
+const printToDom = (divId, textToPrint) => {
+    const selectedDiv = document.getElementById(divId);
+    selectedDiv.innerHTML += textToPrint;
+};
+
+printToDom('dog-breeds', dogBreed('Chow'));
+printToDom('nuggetizer', nuggetizer('bear'));
+printToDom('nuggetizer', nuggetizer('kitten'));
